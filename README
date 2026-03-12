@@ -1,0 +1,25 @@
+def get_age():
+    while True:
+        try:
+            age = int(input("Жасыңызды енгізіңіз: "))
+            if age <= 0:
+                print("Қате: жас 0-ден үлкен болуы керек")
+                continue
+            return age
+        except ValueError:
+            print("Қате: сан енгізу керек!")
+
+def main():
+    name = input("Атыңызды енгізіңіз: ")
+
+    if name.strip() == "":
+        print("Қате: аты бос болмауы керек")
+        return
+
+    age = get_age()
+
+    print("\nНәтиже:")
+    print("Аты:", name)
+    print("Жасы:", age)
+
+main()
